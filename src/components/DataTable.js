@@ -19,6 +19,10 @@ const DataTable = ({ setSelectedRows, selectedRows, data }) => {
     setLoading(false);
   }, [data, searchTerm]);
 
+  const clearSelected = ()=>{
+    setSelectedRows([])
+  }
+
   const handleCheckboxChange = (rowId) => {
     if (selectedRows.includes(rowId)) {
       setSelectedRows(selectedRows.filter((id) => id !== rowId));
@@ -80,6 +84,12 @@ const DataTable = ({ setSelectedRows, selectedRows, data }) => {
           <option value={100}>100</option>
         </select>
         <div>
+          {selectedRows.length > 0 && <button onClick={clearSelected} className="clearButton">
+            Clear
+          </button>}
+          <button onClick={handleDownloadExcel} className="DownloadButton">
+            Download Excel
+          </button>
           <input
             type="text"
             placeholder="Search by title..."
@@ -87,9 +97,6 @@ const DataTable = ({ setSelectedRows, selectedRows, data }) => {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="SearchInput"
           />
-          <button onClick={handleDownloadExcel} className="DownloadButton">
-            Download Excel
-          </button>
         </div>
       </div>
       <table className="DataTable">

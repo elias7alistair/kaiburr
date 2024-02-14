@@ -25,12 +25,12 @@ function App() {
     getData()
   },[])
 
-console.log(selectedRows,'dsaf3')
+
   return (
     <div className="App">
 
      <Header/>
-      <div style={{margin:"10px"}}>
+      <div style={{margin:"10px",display:'flex'}}>
 
       <DataTable selectedRows={selectedRows} data={data} setSelectedRows={setSelectedRows} />
       <Chart selectedRows={selectedRows} data={data} />

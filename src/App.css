@@ -11,6 +11,7 @@
 .ChartContainer {
   display: flex;
   justify-content: center;
+  min-width: 47%;
 }
 
 .Chart {
@@ -95,6 +96,15 @@ p {
   border-radius: 5px; 
   cursor: pointer; 
 }
+.clearButton {
+  padding: 10px 20px; 
+  margin-right: 10px;
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  background-color: #d73c0c; 
+}
 
 .DownloadButton:hover {
   background-color: #0056b3; 
@@ -103,6 +113,7 @@ p {
 .DataTableContainer {
   text-align: center;
   margin: 20px auto;
+  min-width: 47%;
 }
 
 .DataTableHeader {
