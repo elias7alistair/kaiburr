@@ -1,5 +1,16 @@
 ![alt text](image.png)
 
+-------------------------------------
+
+Data visualisation App
+
+Table grid has the following features
+1. Search by any column
+2. Download data in Excel
+3. Sort data by clicking on column
+4. Select rows and clear rows
+5. Selected rows will display on bar chart
+
 
 # Getting Started with Create React App
 
