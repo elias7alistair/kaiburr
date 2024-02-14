@@ -11,6 +11,13 @@ Table grid has the following features
 4. Select rows and clear rows
 5. Selected rows will display on bar chart
 
+---------------------------------------
+
+Packages used
+
+xlxs to download and convert json to csv
+react-plotly.js to display charts
+
 
 # Getting Started with Create React App
 
