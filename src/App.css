@@ -120,7 +120,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px; /* Add space between the header and the table */
+  margin-bottom: 10px; 
 }
 
 .SearchInput {
