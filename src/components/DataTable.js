@@ -12,9 +12,13 @@ const DataTable = ({ setSelectedRows, selectedRows, data }) => {
 
   useEffect(() => {
     setLoading(true);
-    const filtered = data.filter((row) =>
-      row.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const filtered = data.filter(row => {
+        return Object.values(row).some(value =>
+        
+          value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      });
+      
     setFilteredData(filtered);
     setLoading(false);
   }, [data, searchTerm]);
@@ -92,7 +96,7 @@ const DataTable = ({ setSelectedRows, selectedRows, data }) => {
           </button>
           <input
             type="text"
-            placeholder="Search by title..."
+            placeholder="Search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="SearchInput"
