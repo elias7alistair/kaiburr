@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-
+// App.js
+import React, { useEffect, useState } from 'react';
+import DataTable from './components/DataTable';
+import Chart from './components/Chart.js';
+import "./App.css"
+import Header from './components/Header.js';
 function App() {
+
+  const [selectedRows, setSelectedRows] = useState([]);
+
+  const [data, setData] = useState([]);
+
+
+  useEffect(() => {
+
+    //api call will be made here to fetch data i would prefer using axios 
+    const getData = async () => {
+      // using faker to generate 100 dummy data for now...
+
+      fetch('https://dummyjson.com/products')
+        .then(res => res.json())
+        .then(json => setData(json.products))
+    }
+
+    getData()
+  },[])
+
+console.log(selectedRows,'dsaf3')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+     <Header/>
+      <div style={{margin:"10px"}}>
+
+      <DataTable selectedRows={selectedRows} data={data} setSelectedRows={setSelectedRows} />
+      <Chart selectedRows={selectedRows} data={data} />
+      </div>
     </div>
   );
 }

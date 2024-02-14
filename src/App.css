@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Header {
+  background-color: black;
   color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+
+.ChartContainer {
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Chart {
+  width: 100%;
+  max-width: 800px; 
+  margin-top: 20px; 
 }
+
+p {
+  text-align: center; 
+}
+
+.DataTableContainer {
+  width: 100%;
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+
+.DataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.DataTable th,
+.DataTable td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.DataTable th {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.DataTable td input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.SearchInput {
+  width: 100%;
+  padding: 8px;
+ 
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.PaginationButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.PaginationButton.active {
+  background-color: #45a049;
+}
+
+.PaginationButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.DataTableContainer {
+  text-align: center; 
+  margin: 20px auto;
+}
+
+.DownloadButton {
+
+  padding: 10px 20px; 
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+.DownloadButton:hover {
+  background-color: #0056b3; 
+}
+
+.DataTableContainer {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.DataTableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Add space between the header and the table */
+}
+
+.SearchInput {
+  padding: 8px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.DownloadButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.DownloadButton:hover {
+  background-color: #0056b3;
+}
+
+.DataTableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.DataTableHeader .SearchInput {
+  margin-right: 10px; 
+}
+.DataTableHeader .DownloadButton {
+  margin-right: 10px; 
+}
+
+.DataTableHeader select {
+  width: 80px; 
+}
+
+.DataRow:hover {
+  background-color: #f0f0f0;
+}
+
+th:hover {
+  background-color: #f0f0f0;
+}
+
