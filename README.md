@@ -1,5 +1,4 @@
-
-image.png
+![alt text](image.png)
 
 
 # Getting Started with Create React App
